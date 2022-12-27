@@ -34,7 +34,7 @@ if (updateUserForm) {
     form.append('name', document.getElementById('name').value);
     form.email = document.getElementById('email').value;
     form.append('photo', document.getElementById('photo').files[0]);
-    console.log(form);
+
     // updateUser(form);
   });
 }
@@ -45,7 +45,7 @@ if (updatePasswordForm) {
     const passwordCurrent = document.getElementById('password-current').value;
     const password = document.getElementById('password').value;
     const passwordConfirm = document.getElementById('password-confirm').value;
-    console.log(passwordCurrent, password);
+
     updateUser({ passwordCurrent, password, passwordConfirm }, 'password');
   });
 }

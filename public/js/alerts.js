@@ -21,7 +21,6 @@ export const logout = async function () {
     if (res.data.status === 'success') {
       showAlert(res.data.status, 'Logged out succesfully');
       window.setTimeout(() => {
-        console.log('check');
         location.assign('/');
       }, 1500);
     }

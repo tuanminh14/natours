@@ -7,8 +7,8 @@ const factory = require('./HandlerFactory');
 const AppError = require('./../utils/appError');
 const Booking = require('./../models/bookingModel');
 const HandlerFactory = require('./HandlerFactory');
+
 exports.getCheckoutSession = async (req, res, next) => {
-  console.log(typeof process.env.STRIPE_SECRET_KEY);
   //1) Get the currently booked tour
   const tour = await Tour.findById(req.params.tourId);
   //2) Create checkout session
